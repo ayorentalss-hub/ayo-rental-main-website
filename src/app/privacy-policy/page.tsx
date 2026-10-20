@@ -1,0 +1,25 @@
+import type { Metadata } from "next";
+import PolicyPage from "@/components/PolicyPage";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | AYO Rental India",
+  description: "Read how AYO Rental handles personal information on its website and upcoming mobile app in India.",
+};
+
+export default function PrivacyPolicyPage() {
+  return <PolicyPage
+    title="Privacy policy"
+    summary="This policy describes information handled through the AYO Rental website and how privacy will be handled when the AYO app launches in India."
+    callout="The AYO app is not yet available. This website does not create rental bookings, accept payments, or collect driving documents. App-specific features and notices will be provided before those features launch."
+    sections={[
+      { heading: "Who we are and where this applies", paragraphs: ["In this policy, “AYO Rental”, “AYO”, “we”, and “us” refer to the AYO Rental service operating from Vrindavan City, near Jaipuria, Agra, Uttar Pradesh 282001, India. This policy applies to visitors to this website in India and, when released, users of the AYO mobile app in India.", "We intend to handle digital personal data in accordance with applicable Indian law, including the Digital Personal Data Protection Act, 2023 and rules in force, as applicable to our activities."] },
+      { heading: "Information handled by this website", paragraphs: ["You can browse this informational website without creating an account. We do not accept rental bookings or payments on this website and do not request driving licences, identity documents, or precise location access here.", "If you contact us by phone or email, we receive the contact details and message you choose to share. Website hosting and security systems may process limited technical information, such as browser, device, IP address, and request logs, to deliver and protect the site."] },
+      { heading: "Information the future app may request", paragraphs: ["The app is not yet available. If and when a feature requires it, the app may request information such as your name, phone number, email address, account credentials, preferred city, trip details, and vehicle or rental preferences. If rental or payment functionality is introduced, eligibility documents, transaction references, and other information necessary for that service may also be requested with an appropriate notice.", "The app will request device permissions, such as location, only where a feature needs them. You can manage permissions through your device settings; turning off a permission may limit the related feature. A separate app notice will explain the data collected and why before the app launches."] },
+      { heading: "How information may be used", bullets: ["Reply to enquiries and provide customer support.", "Operate, maintain, protect, and improve the website and, after release, the app.", "Provide a feature you choose to use and communicate important service or policy updates.", "Prevent misuse, address security issues, and meet legal obligations."] },
+      { heading: "Sharing, storage, and retention", paragraphs: ["We may share information with service providers who help us operate our website or app, or disclose it when required by law. If app payments are introduced, payment processing and the information shared with the payment provider will be explained before payment. We do not sell personal information.", "We keep information only as long as reasonably needed for the stated purpose, support, security, or legal requirements, and then delete or de-identify it where appropriate. Information may be processed or stored by service providers under appropriate safeguards."] },
+      { heading: "Your choices and requests", paragraphs: ["Subject to applicable law, you may ask to access, correct, or erase personal data, withdraw consent where processing is based on consent, or raise a grievance. Send your request to ayorentalss@gmail.com and include a way for us to respond. We may need to verify your request and may retain records where law permits or requires it."] },
+      { heading: "Children’s privacy", paragraphs: ["This website and the planned rental app are not directed to children. Do not provide a child’s personal information through this website. Any age requirements and safeguards applicable to app features will be disclosed before those features are made available."] },
+      { heading: "Security, changes, and contact", paragraphs: ["We use reasonable safeguards for information under our control, but no internet transmission or storage system can be guaranteed completely secure. Please do not send payment credentials or identity documents by ordinary email.", "We may update this policy when our practices or legal requirements change. The revised version and its effective date will be posted here. For a privacy request or grievance, contact AYO Rental using the details below."] },
+    ]}
+  />;
+}

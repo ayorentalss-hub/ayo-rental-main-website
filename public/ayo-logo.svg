@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 160" role="img" aria-labelledby="title">
+  <title id="title">AYO</title>
+  <g fill="#e60012">
+    <path fill-rule="evenodd" d="M8 145 84 23Q91 10 105 10h34q14 0 21 13l67 116q5 9-5 9h-43q-10 0-15-9l-39-69-14 22-18-1q-16 0-25 15l-17 29q-4 6-12 6H14q-11 0-6-8Zm116-78 15 26h27l-21-38q-2-4-5-4t-6 4l-10 12Z"/>
+    <path d="M218 18q-5-8 5-8h54q9 0 14 8l40 58 42-58q5-8 14-8h55q10 0 5 8l-89 119v17q0 7-8 7h-45q-8 0-8-7v-17L218 18Z"/>
+    <path fill-rule="evenodd" d="M430 80a78 78 0 1 1 156 0 78 78 0 1 1-156 0Zm43 0a35 35 0 1 0 70 0 35 35 0 1 0-70 0Z" transform="translate(-66)"/>
+  </g>
+</svg>
