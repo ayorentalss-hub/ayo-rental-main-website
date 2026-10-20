@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Clock3, Mail, MapPin, Phone } from "lucide-react";
+import MobileNavigation from "@/components/MobileNavigation";
+import ServiceWorkerRegistration from "@/components/ServiceWorkerRegistration";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -19,12 +21,32 @@ export const metadata: Metadata = {
   title: "AYO Rental | The app is coming soon",
   description:
     "The AYO Rental app is coming soon in India. Get in touch with our team and be among the first to hear when it launches.",
+  applicationName: "AYO Rental",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "AYO Rental",
+  },
+  icons: {
+    icon: [
+      { url: "/ayo-icon.svg", type: "image/svg+xml" },
+      { url: "/ayo-icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: "/ayo-icon-192.png",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#e60012",
+  colorScheme: "light",
+  viewportFit: "cover",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
+        <ServiceWorkerRegistration />
         <header className="site-header">
           <div className="header-contact-bar">
             <div className="header-contact-inner page-width">
@@ -44,6 +66,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 <Link href="/about">About</Link>
                 <Link href="/contact">Contact</Link>
               </nav>
+              <MobileNavigation />
               <div className="header-actions">
                 <a className="header-phone" href="tel:9690601958"><Phone size={15} /><span>9690601958</span></a>
                 <Link className="header-cta" href="/#coming-soon">App coming soon <ArrowRight size={15} /></Link>

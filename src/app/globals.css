@@ -150,3 +150,44 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @media (min-width: 761px) and (max-width: 980px) {
   .header-contact-inner { gap: 11px; font-size: 8px; }.main-nav { gap: 17px; }.header-actions { gap: 10px; }.header-phone span { font-size: 9px; }.launch-copy h1 { font-size: 49px; }.app-preview-section { gap: 30px; }.footer-main { grid-template-columns: .8fr .9fr 1.3fr; gap: 24px; }.footer-links { gap: 19px; }
 }
+
+.mobile-menu { display: none; }
+
+@media (max-width: 760px) {
+  .header-contact-inner { display: flex; min-height: 36px; justify-content: center; gap: 16px; padding-block: 6px; font-size: 9px; }
+  .header-contact-inner > span:first-child,
+  .header-contact-inner > span:last-child { display: none; }
+  .header-inner { position: relative; min-height: 64px; gap: 12px; }
+  .main-nav,
+  .header-actions { display: none; }
+  .mobile-menu { position: relative; display: block; margin-left: auto; }
+  .mobile-menu-button { display: inline-flex; min-height: 42px; align-items: center; justify-content: center; gap: 7px; border: 1px solid var(--line); border-radius: 999px; padding: 0 12px; background: white; color: var(--ink); font-size: 12px; font-weight: 650; cursor: pointer; }
+  .mobile-menu-button:focus-visible,
+  .mobile-menu-panel a:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+  .mobile-menu-panel { position: absolute; z-index: 10; top: calc(100% + 12px); right: 0; display: grid; width: min(280px, calc(100vw - 34px)); gap: 3px; padding: 10px; border: 1px solid var(--line); border-radius: 12px; background: white; box-shadow: 0 14px 35px rgba(34, 33, 38, .16); }
+  .mobile-menu-panel > a { display: flex; min-height: 43px; align-items: center; justify-content: space-between; border-radius: 7px; padding: 0 12px; color: #4e4b53; font-size: 13px; }
+  .mobile-menu-panel > a:hover { background: var(--mist); color: var(--red); }
+  .mobile-menu-panel > .mobile-menu-cta { margin-top: 4px; background: var(--red); color: white; }
+  .mobile-menu-panel > .mobile-menu-cta:hover { background: var(--red-dark); color: white; }
+}
+
+@media (max-width: 420px) {
+  .header-contact-inner { gap: 11px; font-size: 8px; }
+  .launch-hero,
+  .launch-hero-content { min-height: 570px; }
+  .launch-copy { padding-top: 38px; }
+  .launch-copy h1 { font-size: clamp(36px, 11vw, 43px); }
+  .launch-description { font-size: 12px; line-height: 1.65; }
+  .launch-actions { gap: 12px; }
+  .launch-actions .button { min-height: 46px; }
+  .availability-copy strong { font-size: 11px; line-height: 1.4; }
+  .availability-copy p { font-size: 9px; }
+  .store-badges > div { grid-template-columns: 22px 1fr; padding-inline: 8px; }
+  .preview-stage { min-height: 440px; }
+  .phone-mockup { width: 210px; height: 420px; }
+  .phone-vehicle-photo { height: 96px; }
+  .preview-orbit { width: 260px; height: 260px; }
+  .orbit-two { width: 330px; height: 330px; }
+  .preview-stamp { right: 10px; bottom: 59px; padding: 8px; }
+  .footer-bottom { flex-wrap: wrap; justify-content: flex-start; padding-block: 10px; }
+}

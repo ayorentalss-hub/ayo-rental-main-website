@@ -4,6 +4,8 @@ India-focused app launch website for AYO Rental. It introduces the upcoming car 
 
 Public pages: About, Contact, Privacy Policy, Terms & Conditions, Cancellation & Refunds, App Availability, and Pricing.
 
+The site is responsive on mobile and can be installed as a PWA on supported browsers. Its service worker caches the app shell and visited pages, and shows an offline page when a requested page is not available offline. Installation requires HTTPS in production.
+
 ## Run locally
 
 ```bash
