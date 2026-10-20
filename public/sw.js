@@ -1,4 +1,4 @@
-const STATIC_CACHE = "ayo-rental-static-v1";
+const STATIC_CACHE = "ayo-rental-static-v2";
 const PAGE_CACHE = "ayo-rental-pages-v1";
 const APP_SHELL = [
   "/",
@@ -7,6 +7,7 @@ const APP_SHELL = [
   "/ayo-icon.svg",
   "/ayo-icon-192.png",
   "/ayo-icon-512.png",
+  "/hero-rental-car.jpg",
 ];
 
 self.addEventListener("install", (event) => {

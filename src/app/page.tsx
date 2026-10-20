@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import {
   ArrowDown,
   ArrowRight,
@@ -13,6 +14,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import DriveScene from "@/components/DriveScene";
+import HomeMotion from "@/components/HomeMotion";
 
 export const metadata: Metadata = {
   title: "AYO Rental | App Coming Soon in India",
@@ -43,9 +45,25 @@ const appFeatures = [
 
 export default function Home() {
   return (
-    <main>
+    <main className="home-page">
+      <HomeMotion />
       <section className="launch-hero hero-scene" aria-labelledby="hero-title">
         <DriveScene variant="hero" />
+        <div className="hero-photo-card">
+          <Image
+            alt="A rental car ready for a drive"
+            className="hero-photo"
+            fill
+            priority
+            sizes="(max-width: 760px) 70vw, 42vw"
+            src="/hero-rental-car.jpg"
+          />
+          <div className="hero-photo-shade" />
+          <div className="hero-photo-caption">
+            <span>THE ROAD IS YOURS</span>
+            <strong>Find your next way out.</strong>
+          </div>
+        </div>
         <div className="launch-hero-content page-width">
           <div className="launch-copy">
             <p className="launch-eyebrow"><span /> THE AYO APP · COMING SOON IN INDIA</p>
@@ -65,7 +83,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="availability-band" id="coming-soon">
+      <section className="availability-band" data-motion id="coming-soon">
         <div className="availability-inner page-width">
           <div className="availability-icon"><Smartphone size={21} /></div>
           <div className="availability-copy"><span>COMING SOON</span><strong>The AYO app is still in the garage.</strong><p>App Store and Google Play download links will appear here when the app is ready.</p></div>
@@ -76,7 +94,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="app-preview-section page-width" id="app-preview" aria-labelledby="preview-title">
+      <section className="app-preview-section page-width" data-motion id="app-preview" aria-labelledby="preview-title">
         <div className="preview-copy">
           <p className="eyebrow"><span className="eyebrow-dot" /> A FIRST LOOK</p>
           <h2 id="preview-title">Big plans deserve<br />a simpler start.</h2>
@@ -108,7 +126,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="features-section">
+      <section className="features-section" data-motion>
         <div className="page-width">
           <div className="features-heading"><div><p className="eyebrow"><span className="eyebrow-dot" /> THE ROAD AHEAD</p><h2>Made for wherever<br />you’re headed.</h2></div><p>One app for exploring rental options and getting the details you need before a trip.</p></div>
           <div className="feature-grid">
@@ -123,14 +141,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="launch-cta page-width">
+      <section className="launch-cta page-width" data-motion>
         <div className="cta-mark"><Smartphone size={23} /></div>
         <div><p className="eyebrow">INDIA, WE’RE GETTING READY</p><h2>Get the first word<br />when AYO arrives.</h2><p>The app is coming soon. Email us to ask about launch updates.</p></div>
         <a className="button button-primary" href="mailto:ayorentalss@gmail.com?subject=AYO%20app%20launch%20updates">Email AYO <ArrowRight size={16} /></a>
         <span className="cta-decoration" aria-hidden="true">AYO</span>
       </section>
 
-      <section className="faq-section page-width" aria-labelledby="faq-title">
+      <section className="faq-section page-width" data-motion aria-labelledby="faq-title">
         <div className="faq-heading"><p className="eyebrow"><span className="eyebrow-dot" /> A FEW QUICK ANSWERS</p><h2 id="faq-title">Before we hit the road.</h2></div>
         <div className="faq-list">
           <details><summary>Can I book a rental on this website?<span>+</span></summary><p>No. This website shares information about AYO and the upcoming app. It does not take bookings, payments, or rental requests.</p></details>
